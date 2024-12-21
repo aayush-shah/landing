@@ -4,6 +4,8 @@ body {
   font-family: 'Roboto';
   background-color: #131417;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -20,6 +22,8 @@ p {
   justify-content: center;
   position: relative;
   z-index: 1;
+  padding: 1rem;
+  text-align: left;
 }
 
 .animation {
@@ -33,10 +37,11 @@ p {
   height: 2.81rem;
   margin-bottom: 2.81rem;
   display: inline-block;
+  border-radius: 5px; /* Add rounded corners */
 }
 
 .animation div:first-child {
-  animation: text-animation 16s infinite;
+  animation: text-animation 6s infinite; /* Reduced duration from 16s to 8s */
 }
 
 .first div {
@@ -54,16 +59,10 @@ p {
 .fourth div {
   background-color: #2041ad;
 }
-.fifth div {
-  background-color: #4b914f;
-}
-.sixth div {
-  background-color: #755514;
-}
 
-@keyframes text-animation {
+/* @keyframes text-animation {
   0% { margin-top: 0; }
-  12.5% { margin-top: 0; }
+  20% { margin-top: 0; }
   25% { margin-top: -5.62rem; }
   37.5% { margin-top: -5.62rem; }
   50% { margin-top: -11.24rem; }
@@ -71,7 +70,18 @@ p {
   75% { margin-top: -16.86rem; }
   87.5% { margin-top: -22.48rem; }
   100% { margin-top: -22.48rem; }
-  100% { margin-top: 0; }
+} */
+
+@keyframes text-animation {
+  0% { margin-top: 0; }
+  20% { margin-top: 0; } /* Increased wait time at the start */
+  25% { margin-top: -5.62rem; }
+  45% { margin-top: -5.62rem; }
+  50% { margin-top: -11.24rem; }
+  75% { margin-top: -11.24rem; }
+  95% { margin-top: -16.86rem; }
+  100% { margin-top: -22.48rem; }
+  /* 100% { margin-top: -22.48rem; } */
 }
 
 .tech-words {
@@ -86,14 +96,14 @@ p {
 
 .tech-words span {
   position: absolute;
-  font-size: 2rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.1);
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   animation: move 30s linear infinite;
   --direction-x: 1;
   --direction-y: 1;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0.5rem 1rem;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
@@ -113,5 +123,43 @@ p {
   }
   100% {
     transform: translate(50vw, 0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .animation {
+    margin-left: 0;
+  }
+
+  .animation > div > div {
+    height: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .tech-words span {
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    font-size: 1.2rem;
+  }
+
+  .animation > div > div {
+    height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-words span {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
   }
 }
