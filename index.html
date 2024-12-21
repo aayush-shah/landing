@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page - Aayush Shah</title>
   <link rel="stylesheet" href="./style.css">
+  <style>
+    .first div, .second div, .third div, .fourth div, .fifth div, .sixth div {
+      border-radius: 10px; /* Add rounded corners */
+    }
 
+    .first div {
+      background-color: #20a7d8;
+    }
+
+    .second div {
+      background-color: #CD921E;
+    }
+
+    .third div {
+      background-color: #c10528;
+    }
+
+    .fourth div {
+      background-color: #2041ad;
+    }
+  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -12,12 +33,98 @@
   <p>Hello 👋 I'm</p>
   <section class="animation">
     <div class="first"><div>Aayush Shah</div></div>
-    <div class="second"><div>Architect</div></div>
+    <div class="second"><div>Software Architect</div></div>
     <div class="third"><div>Software Engineer</div></div>
     <div class="fourth"><div>GenAI Engineer</div></div>
   </section>
 </main>
+<div class="tech-words">
+  <span>Python</span>
+  <span>Java</span>
+  <span>Generative AI (GenAI)</span>
+  <span>Large Language Models (LLM)</span>
+  <span>AWS</span>
+  <span>Azure</span>
+  <span>GCP</span>
+  <span>Microservices</span>
+  <span>DevOps</span>
+  <span>CI/CD</span>
+  <span>Docker</span>
+  <span>Serverless</span>
+  <span>API</span>
+  <span>RESTful Services</span>
+  <span>GraphQL</span>
+  <span>Machine Learning</span>
+  <span>Artificial Intelligence</span>
+  <span>Cloud Computing</span>
+  <span>Big Data</span>
+  <span>Data Science</span>
+  <span>Agile Methodology</span>
+  <span>IoT</span>
+  <span>Cybersecurity</span>
+  <span>Full Stack Development</span>
+  <span>Frontend</span>
+  <span>Backend</span>
+  <span>SaaS</span>
+  <span>PaaS</span>
+  <span>IaaS</span>
+  <span>Edge Computing</span>
+  <span>Containerization</span>
+  <span>Infrastructure as Code (IaC)</span>
+  <span>Continuous Monitoring</span>
+  <span>Scalability</span>
+  <span>High Availability</span>
+  <span>Load Balancing</span>
+  <span>Virtualization</span>
+  <span>Networking</span>
+  <span>SRE</span>
+  <span>Observability</span>
+  <span>Performance Tuning</span>
+  <span>Code Review</span>
+  <span>Version Control (Git)</span>
+  <span>Dependency Management</span>
+  <span>Package Management</span>
+  <span>NoSQL</span>
+  <span>SQL</span>
+  <span>Data Warehousing</span>
+  <span>ETL</span>
+  <span>Data Pipelines</span>
+  <span>API Gateway</span>
+  <span>Event-Driven Architecture</span>
+  <span>Message Queues</span>
+  <span>Pub/Sub</span>
+  <span>WebSockets</span>
+  <span>Cross-Platform Development</span>
+  <span>DevSecOps</span>
+  <span>Compliance</span>
+  <span>HIPAA</span>
+  <span>Threat Modeling</span>
+  <span>Incident Response</span>
+  <span>Disaster Recovery</span>
+  <span>Business Continuity</span>
+  <span>Risk Management</span>
+  <span>Identity and Access Management (IAM)</span>
+  <span>Zero Trust Security</span>
+  <span>Encryption</span>
+  <span>Authentication</span>
+  <span>Authorization</span>
+  <span>API Security</span>
+  <span>Secure Coding</span>
+  <span>Code Quality</span>
+  <span>Design Patterns</span>
+  <span>SOLID Principles</span>
+</div>
 <!-- partial -->
-  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const spans = document.querySelectorAll('.tech-words span');
+    spans.forEach(span => {
+      const directionX = Math.random() * 2 - 1; // Random value between -1 and 1
+      const directionY = Math.random() * 2 - 1; // Random value between -1 and 1
+      span.style.setProperty('--direction-x', directionX);
+      span.style.setProperty('--direction-y', directionY);
+    });
+  });
+</script>
 </body>
 </html>
