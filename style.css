@@ -54,6 +54,12 @@ p {
 .fourth div {
   background-color: #2041ad;
 }
+.fifth div {
+  background-color: #4b914f;
+}
+.sixth div {
+  background-color: #755514;
+}
 
 @keyframes text-animation {
   0% { margin-top: 0; }
@@ -63,7 +69,8 @@ p {
   50% { margin-top: -11.24rem; }
   62.5% { margin-top: -11.24rem; }
   75% { margin-top: -16.86rem; }
-  87.5% { margin-top: -16.86rem; }
+  87.5% { margin-top: -22.48rem; }
+  100% { margin-top: -22.48rem; }
   100% { margin-top: 0; }
 }
 
@@ -85,6 +92,10 @@ p {
   animation: move 30s linear infinite;
   --direction-x: 1;
   --direction-y: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 @keyframes move {
